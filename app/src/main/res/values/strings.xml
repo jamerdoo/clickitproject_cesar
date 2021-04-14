@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CesarTestITPoint</string>
+    <string name="currency">EUR</string>
+    <string name="value">0</string>
+    <string name="valor">Valor</string>
+    <string name="calcular">Calcular</string>
+</resources>

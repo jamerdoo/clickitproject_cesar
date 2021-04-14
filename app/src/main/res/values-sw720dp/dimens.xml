@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="text_size_tittle_1">42sp</dimen>
+    <dimen name="text_size_tittle_2">40sp</dimen>
+    <dimen name="text_size_tittle">40sp</dimen>
+    <dimen name="text_size_1">34sp</dimen>
+    <dimen name="text_size_1_2">28sp</dimen>
+    <dimen name="text_size_2">24sp</dimen>
+    <dimen name="text_size_3">40sp</dimen>
+    <dimen name="text_size_4">21sp</dimen>
+    <dimen name="text_size_5">20sp</dimen>
+    <dimen name="text_size_6">19sp</dimen>
+    <dimen name="text_size_7">18sp</dimen>
+    <dimen name="text_size_8">14sp</dimen>
+
+    <dimen name="banner_size">240dp</dimen>
+    <dimen name="banner_size_2">205dp</dimen>
+    <dimen name="photo_visor">310dp</dimen>
+
+    <!-- Spacing Sizes -->
+    <dimen name="spacing.xxxs">5dp</dimen>
+    <dimen name="spacing.xxs">12dp</dimen>
+    <dimen name="spacing.xs">18dp</dimen>
+    <dimen name="spacing.xsm">20dp</dimen>
+    <dimen name="spacing.sm">24dp</dimen>
+    <dimen name="spacing.xmd">30dp</dimen>
+    <dimen name="spacing.md">35dp</dimen>
+    <dimen name="spacing.lg">40dp</dimen>
+    <dimen name="spacing.xlg">62dp</dimen>
+    <dimen name="spacing.xxlg">64dp</dimen>
+    <dimen name="spacing.xxxlg">76dp</dimen>
+
+    <dimen name="profilesize">250dp</dimen>
+    <dimen name="back_arrow_size">45dp</dimen>
+    <dimen name="profilesize_historico">140dp</dimen>
+    <dimen name="profilesize_citas">70dp</dimen>
+    <dimen name="profile_arrow_distance">20dp</dimen>
+
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">12sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">12sp</dimen>
+
+    <dimen name="iconos_perfil_size">45dp</dimen>
+</resources>

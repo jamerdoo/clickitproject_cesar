@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1d9eea</color>
+    <color name="colorPrimaryDark">#1354c3</color>
+    <color name="colorPrimaryTrans">#0E9A9E</color>
+
+    <color name="colorAccent">#372EB5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_trans">#CCFFFFFF</color>
+    <color name="white_suave">#a0ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_trans">#80000000</color>
+    <color name="azulapp">#019AE8</color>
+    <color name="azul_ticket">#a2d4de</color>
+    <color name="moradocirculos">#3F51B5</color>
+    <color name="moradoapp">#372EB5</color>
+    <color name="red">#e61c20</color>
+
+    <color name="gris_ale">#232323</color>
+    <color name="gris_banner">#EEEEEE</color>
+    <color name="gris_suave">#dddddd</color>
+    <color name="rosado">#e01a4a</color>
+
+    <color name="gris_letras">#333333</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#D9D9D9</color>
+    <color name="gray_200">#e5e5e5</color>
+    <color name="gray_770">#cb6c6c6c</color>
+    <color name="gray_700">#6C6C6C</color>
+    <color name="text_labels">#b3b3b3</color>
+    <color name="text_labels_dark">#979797</color>
+    <color name="color_navigation">#B3565656</color>
+    <color name="gray_fondo_registro">#ECECEC</color>
+    <color name="gris_inactivo">#737373</color>
+
+    <color name="backgraund_recycler_trainer">#e7e7e7</color>
+
+    <color name="text_blue">#1138ff</color>
+    <color name="text_menu_bottom">#426ae3</color>
+    <color name="azul_corporate">#0098cd</color>
+
+    <color name="golden_vip">#ebad0e</color>
+    <color name="mostaza">#ffce39</color>
+
+
+    <color name="green_swiche">#3ECC4B</color>
+    <color name="verde">#28A745</color>
+    <color name="darkRed">#D32F2F</color>
+    <color name="gris_recycler">#ededed</color>
+    <color name="gris_btn_login">#292c29</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="mi_icon_color_dark">#b3ffffff</color>
+    <color name="mi_text_color_primary_dark">#0d7ca1</color>
+    <color name="mi_text_color_secondary_dark">#ebad0e</color>
+
+    <color name="mi_status_bar_background">#ff000000</color>
+    <color name="mi_ripple_color">#17000000</color>
+
+    <color name="texto_normal">#111111</color>
+    <color name="color_btn_google">#1d9eea</color>
+    <color name="yellow_registro">#fbba04</color>
+    <color name="gris_olvide">#373939</color>
+    <color name="fondo_registro">#e1f0f7</color>
+    <color name="azul_canjear">#e2f2fa</color>
+    <color name="azul_canjear_oscuro">#b4c6cf</color>
+
+</resources>
