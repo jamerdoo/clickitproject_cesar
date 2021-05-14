@@ -17,7 +17,10 @@ import com.cesar.cesartestitpoint.roomDB.RatesDatabase
 import com.cesar.cesartestitpoint.roomDB.RatesRepository
 import com.cesar.cesartestitpoint.utils.Logger
 import com.google.gson.Gson
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import okhttp3.Dispatcher
 
 class MainViewModel : ViewModel() , Logger, RoomResponse {
 
@@ -29,7 +32,6 @@ class MainViewModel : ViewModel() , Logger, RoomResponse {
     private val dao = RatesDatabase.getInstance(MyApplication.getApp()).dao
     private val dbRepository = RatesRepository(dao)
     private val roomResponse:RoomResponse=this
-
 
     var liveData = MutableLiveData<Resource<ArrayList<RatesMap>>>()
     var liveDataByCurrency = MutableLiveData<Resource<ArrayList<RatesMap>>>()
@@ -60,9 +62,9 @@ class MainViewModel : ViewModel() , Logger, RoomResponse {
 
     private fun searchCurrency(currency: String){
         var localRates: LocalRates?
-        viewModelScope.launch {
-            localRates = dbRepository.getDataById(currency)
 
+        viewModelScope.launch(Dispatchers.Main) {
+            localRates = dbRepository.getDataById(currency)
             if(localRates!=null && localRates!!.base==currency){
                 roomResponse.onSuccess(localRates!!)
             }else{
@@ -71,13 +73,31 @@ class MainViewModel : ViewModel() , Logger, RoomResponse {
         }
     }
 
+    /**
+     * Corrutines example
+     * 1. Scope
+     * 2. Launch
+     * 3. Dispatchers (Params IO,Main,Default)
+     * 4. withcontext (Cambiar los hilos de ejecucion)
+     * */
+    private fun searchCurrencyCorrutines(currency: String){
+        var localRates: LocalRates?
+        viewModelScope.launch(Dispatchers.Main) {
+            localRates = withContext(Dispatchers.IO) {dbRepository.getDataById(currency)}
+            localRates?.let {
+                if(it.base==currency) onSuccess(it) else onFailed(currency)
+            }
+        }
+    }
+
     override fun onSuccess(localRates: LocalRates) {
-        logD(Gson().toJson(localRates))
+        logD(Gson().toJson("onSuccess $localRates"))
         val objectList = Gson().fromJson(localRates.data, Array<RatesMap>::class.java).asList()
         liveData.value = Resource.Success(ArrayList(objectList))
     }
 
     override fun onFailed(currency: String) {
+        logD(Gson().toJson("onFailed $currency"))
         liveData.value = Resource.Loading()
 
         getInfo.invoke(onResult = { it ->
